@@ -1,0 +1,16 @@
+<h1>
+  {{title}}
+</h1>
+<br>
+<app-list></app-list>
+
+<hr>
+<p>
+  <app-child [data]="data"></app-child>
+</p>
+
+<div class="mce-btn-group">
+  <button (click)="changeSubItem()" class="btn btn-primary">Change SubItem</button>
+  <button (click)="changeSubItemInItem()" class="btn btn-primary">Change SubItem In Items</button>
+  <button (click)="changeChild()" class="btn btn-primary">Change Child</button>
+</div>
