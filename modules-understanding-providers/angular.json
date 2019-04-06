@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "module-per-device": {
+    "modules-understanding-providers": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/module-per-device",
+            "outputPath": "dist/modules-understanding-providers",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "module-per-device:build"
+            "browserTarget": "modules-understanding-providers:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "module-per-device:build:production"
+              "browserTarget": "modules-understanding-providers:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "module-per-device:build"
+            "browserTarget": "modules-understanding-providers:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
         }
       }
     },
-    "module-per-device-e2e": {
+    "modules-understanding-providers-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "module-per-device:serve"
+            "devServerTarget": "modules-understanding-providers:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "module-per-device:serve:production"
+              "devServerTarget": "modules-understanding-providers:serve:production"
             }
           }
         },
@@ -133,42 +133,7 @@
           }
         }
       }
-    },
-    "my-lib": {
-      "root": "projects/my-lib",
-      "sourceRoot": "projects/my-lib/src",
-      "projectType": "library",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/my-lib/tsconfig.lib.json",
-            "project": "projects/my-lib/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/my-lib/src/test.ts",
-            "tsConfig": "projects/my-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/my-lib/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/my-lib/tsconfig.lib.json",
-              "projects/my-lib/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
     }
   },
-  "defaultProject": "module-per-device"
+  "defaultProject": "modules-understanding-providers"
 }

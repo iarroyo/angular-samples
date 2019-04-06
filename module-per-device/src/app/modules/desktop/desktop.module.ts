@@ -6,6 +6,7 @@ import { CDesktopComponent } from './components/c/c.component';
 import { DDesktopComponent } from './components/d/d.component';
 import { EDesktopComponent } from './components/e/e.component';
 import { DesktopRoutingModule } from './desktop-routing.module';
+import { MyLibModule } from 'my-lib';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DesktopRoutingModule } from './desktop-routing.module';
   ],
   imports: [
     CommonModule,
-    DesktopRoutingModule
+    DesktopRoutingModule,
+    MyLibModule
   ],
   providers: [],
   exports: []
